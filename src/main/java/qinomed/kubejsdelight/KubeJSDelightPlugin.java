@@ -13,9 +13,9 @@ import qinomed.kubejsdelight.recipe.CuttingRecipeJS;
 public class KubeJSDelightPlugin extends KubeJSPlugin {
     @Override
     public void init() {
-        RegistryObjectBuilderTypes.ITEM.addType("knife", KnifeItemBuilder.class, KnifeItemBuilder::new);
-        RegistryObjectBuilderTypes.BLOCK.addType("pie", PieBlockBuilder.class, PieBlockBuilder::new);
-        RegistryObjectBuilderTypes.BLOCK.addType("feast", FeastBlockBuilder.class, FeastBlockBuilder::new);
+        RegistryObjectBuilderTypes.ITEM.addType("farmersdelight:knife", KnifeItemBuilder.class, KnifeItemBuilder::new);
+        RegistryObjectBuilderTypes.BLOCK.addType("farmersdelight:pie", PieBlockBuilder.class, PieBlockBuilder::new);
+        RegistryObjectBuilderTypes.BLOCK.addType("farmersdelight:feast", FeastBlockBuilder.class, FeastBlockBuilder::new);
     }
 
     @Override
