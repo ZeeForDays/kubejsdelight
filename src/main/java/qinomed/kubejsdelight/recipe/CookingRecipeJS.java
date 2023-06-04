@@ -7,6 +7,7 @@ import dev.latvian.mods.kubejs.item.ItemStackJS;
 import dev.latvian.mods.kubejs.recipe.*;
 import dev.latvian.mods.kubejs.util.ListJS;
 import net.minecraft.core.NonNullList;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -17,13 +18,13 @@ import vectorwing.farmersdelight.common.registry.ModRecipeSerializers;
 import java.util.List;
 
 public class CookingRecipeJS extends RecipeJS {
-    public static RecipeSerializer<CookingPotRecipe> serializer = (RecipeSerializer<CookingPotRecipe>) ModRecipeSerializers.COOKING.get();
+    public RecipeSerializer<CookingPotRecipe> serializer = (RecipeSerializer<CookingPotRecipe>) ModRecipeSerializers.COOKING.get();
     private CookingPotRecipe recipe = null;
 
     @Override
     public void create(RecipeArguments args) {
         recipe = new CookingPotRecipe(
-                getOrCreateId(),
+                new ResourceLocation("kubejs:dummy"),
                 "",
                 null,
                 parseItemInputListNN(args.get(0)),
