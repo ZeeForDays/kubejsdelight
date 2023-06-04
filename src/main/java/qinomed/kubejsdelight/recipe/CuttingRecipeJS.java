@@ -8,6 +8,7 @@ import dev.latvian.mods.kubejs.recipe.*;
 import dev.latvian.mods.kubejs.util.ListJS;
 import dev.latvian.mods.kubejs.util.MapJS;
 import net.minecraft.core.NonNullList;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -17,12 +18,12 @@ import vectorwing.farmersdelight.common.crafting.ingredient.ChanceResult;
 import vectorwing.farmersdelight.common.registry.ModRecipeSerializers;
 
 public class CuttingRecipeJS extends RecipeJS {
-    public static RecipeSerializer<CuttingBoardRecipe> serializer = (RecipeSerializer<CuttingBoardRecipe>) ModRecipeSerializers.CUTTING.get();
+    public RecipeSerializer<CuttingBoardRecipe> serializer = (RecipeSerializer<CuttingBoardRecipe>) ModRecipeSerializers.CUTTING.get();
     private CuttingBoardRecipe recipe = null;
     @Override
     public void create(RecipeArguments args) {
         recipe = new CuttingBoardRecipe(
-                getOrCreateId(),
+                new ResourceLocation("kubejs:dummy"),
                 "",
                 parseItemInput(args.get(0)),
                 parseItemInput(args.get(1)),
