@@ -1,8 +1,8 @@
 package qinomed.kubejsdelight;
 
 import dev.latvian.mods.kubejs.KubeJSPlugin;
-import dev.latvian.mods.kubejs.RegistryObjectBuilderTypes;
-import dev.latvian.mods.kubejs.recipe.RegisterRecipeTypesEvent;
+import dev.latvian.mods.kubejs.recipe.schema.RegisterRecipeSchemasEvent;
+import dev.latvian.mods.kubejs.registry.RegistryInfo;
 import net.minecraft.resources.ResourceLocation;
 import qinomed.kubejsdelight.block.custom.FeastBlockBuilder;
 import qinomed.kubejsdelight.item.custom.KnifeItemBuilder;
@@ -13,14 +13,14 @@ import qinomed.kubejsdelight.recipe.CuttingRecipeJS;
 public class KubeJSDelightPlugin extends KubeJSPlugin {
     @Override
     public void init() {
-        RegistryObjectBuilderTypes.ITEM.addType("farmersdelight:knife", KnifeItemBuilder.class, KnifeItemBuilder::new);
-        RegistryObjectBuilderTypes.BLOCK.addType("farmersdelight:pie", PieBlockBuilder.class, PieBlockBuilder::new);
-        RegistryObjectBuilderTypes.BLOCK.addType("farmersdelight:feast", FeastBlockBuilder.class, FeastBlockBuilder::new);
+        RegistryInfo.ITEM.addType("farmersdelight:knife", KnifeItemBuilder.class, KnifeItemBuilder::new);
+        RegistryInfo.BLOCK.addType("farmersdelight:pie", PieBlockBuilder.class, PieBlockBuilder::new);
+        RegistryInfo.BLOCK.addType("farmersdelight:feast", FeastBlockBuilder.class, FeastBlockBuilder::new);
     }
 
     @Override
-    public void registerRecipeTypes(RegisterRecipeTypesEvent event) {
-        event.register(new ResourceLocation("farmersdelight:cutting"), CuttingRecipeJS::new);
-        event.register(new ResourceLocation("farmersdelight:cooking"), CookingRecipeJS::new);
+    public void registerRecipeSchemas(RegisterRecipeSchemasEvent event) {
+        event.register(new ResourceLocation("farmersdelight:cutting"), CuttingRecipeJS.SCHEMA);
+        event.register(new ResourceLocation("farmersdelight:cooking"), CookingRecipeJS.SCHEMA);
     }
 }
