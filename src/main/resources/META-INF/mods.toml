@@ -24,7 +24,7 @@ FD integration for KubeJS
 [[dependencies.kubejsdelight]]
    modId="kubejs"
    mandatory=true
-   versionRange="[1902.6.0-build.268,)"
+   versionRange="[1902.6.0-build.282,)"
    ordering="NONE"
    side="BOTH"
 [[dependencies.kubejsdelight]]
