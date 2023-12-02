@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[43,)"
 license="GNU LGPL 3.0"
 [[mods]]
 modId="kubejsdelight"
@@ -12,24 +12,24 @@ FD integration for KubeJS
 [[dependencies.kubejsdelight]]
    modId="forge"
    mandatory=true
-   versionRange="[47,)"
+   versionRange="[43,)"
    ordering="NONE"
    side="BOTH"
 [[dependencies.kubejsdelight]]
    modId="minecraft"
    mandatory=true
-   versionRange="[1.20.1,)"
+   versionRange="[1.19.2,1.20)"
    ordering="NONE"
    side="BOTH"
 [[dependencies.kubejsdelight]]
    modId="kubejs"
    mandatory=true
-   versionRange="[2001.6.4-build.95,)"
+   versionRange="[1902.6.0-build.282,)"
    ordering="NONE"
    side="BOTH"
 [[dependencies.kubejsdelight]]
    modId="farmersdelight"
    mandatory=true
-   versionRange="[1.20.1-1.2.3,)"
+   versionRange="[1.19-1.2.1,)"
    ordering="NONE"
    side="BOTH"
