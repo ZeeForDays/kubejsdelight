@@ -1,14 +1,16 @@
 package qinomed.kubejsdelight;
 
-import net.minecraftforge.fml.common.Mod;
+import com.mojang.logging.LogUtils;
+import net.fabricmc.api.ModInitializer;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(KubeJSDelight.MODID)
-public class KubeJSDelight {
+
+public class KubeJSDelight implements ModInitializer {
 
     // Define mod id in a common place for everything to reference
     public static final String MODID = "kubejsdelight";
 
-    public KubeJSDelight() {
-    }
+    @Override
+	public void onInitialize() {
+	}
 }
